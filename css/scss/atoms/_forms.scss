@@ -1,0 +1,17 @@
+.form-control{
+  border-radius: 25px;
+  border-color: rgba($color-primary, 0.2);
+}
+
+.input-group{
+  .input-group-prepend{
+    .input-group-text{
+      padding: .375rem .75rem 0.3rem 0.9rem;
+      background: rgba($color-primary, 0.1);
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      border-right: 0;
+      border-color: rgba($color-primary, 0.2);
+    }
+  }
+}

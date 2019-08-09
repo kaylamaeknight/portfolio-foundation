@@ -1,0 +1,123 @@
+.header{
+  background: $color-white;
+  border-top: 2px solid $color-gray-1;
+  box-shadow: 0 1px 10px rgba(0,0,0,0.1);
+  padding: 1.25rem 0 1rem;
+  z-index: 1001;
+
+  .logo{
+    height: 60px;
+    margin-left: -8px; /* Offset for shadow in image */
+  }
+
+  .navbar{
+
+    .navbar-toggler{
+      &:not(.collapsed){
+        background: $color-gray-1;
+      }
+
+      &:focus{
+        outline: none;
+      }
+    }
+
+    .collapsing {
+      -webkit-transition: none;
+      transition: none;
+      display: none;
+    }
+
+    .navbar-collapse.show{
+      position: fixed;
+      top: 98px;
+      left: 0;
+      width: 100%;
+      padding: 0 15px 30px;
+      box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+      background: $color-white;
+      transition: none;
+    }
+
+    .navbar-nav{
+      font-size: 0.85rem;
+
+      .nav-item{
+        .nav-link{
+          color: $color-black;
+        }
+
+        @media screen and (max-width: 768px){
+          .dropdown-menu{
+            margin: 0 0 0 1rem;
+            border: 0;
+
+            h3{
+              margin: 0;
+              padding: .5rem 1rem;
+              font-size: 0.85rem;
+            }
+
+            p{
+              display: none;
+            }
+          }
+        }
+
+        @media screen and (min-width: 768px){
+          .dropdown-menu{
+            left: auto;
+            right: 0;
+            min-width: 450px;
+            margin: 28px 0 0;
+            padding: 30px;
+            background: $color-white;
+            border: 0;
+            border-top: 1px solid $color-gray-1;
+            border-radius: 0;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 8px 10px rgba(0,0,0,0.1);
+            font-size: 0.85rem;
+
+            h3,
+            .h3,
+            h3 a,
+            .h3 a{
+              margin: 0 0 0.5rem;
+              font-size: 1rem;
+              color: $color-primary;
+              transition: color 0.25s ease-in-out;
+
+              &:hover{
+                color: $color-secondary;
+              }
+            }
+
+            &:before{
+              content: '';
+              position: absolute;
+              top: -10px;
+              right: 35px;
+              width: 0;
+              height: 0;
+              border-left: 10px solid transparent;
+              border-right: 10px solid transparent;
+              border-bottom: 10px solid $color-secondary;
+            }
+          }
+        }
+
+        &.active{
+          font-weight: 600;
+        }
+
+        @media screen and (min-width: 768px){
+          &+.nav-item{
+            margin-left: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

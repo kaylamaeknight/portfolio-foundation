@@ -1,0 +1,16 @@
+.hero{
+  display: flex;
+  height: 100vh;
+  padding-top: 140px;
+  background-color: rgba($color-secondary, 0.05);
+  background-image: url('../images/hero.svg');
+  background-size: calc(50vh - 98px);
+  background-repeat: no-repeat;
+  background-position: right bottom;
+
+  @media screen and (min-width: 768px){
+    padding-top: 0;
+    align-items: center;
+    background-size: calc(90vh - 98px);
+  }
+}
